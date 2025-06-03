@@ -1,0 +1,29 @@
+{
+   "chrome_settings_overrides": {
+      "search_provider": {
+         "encoding": "UTF-8",
+         "favicon_url": "https://perplexity.ai/favicon.ico",
+         "is_default": true,
+         "keyword": "perplexity.com",
+         "name": "PERPLEXITY",
+         "search_url": "https://perplexity.ai/?q={searchTerms}&hints=search&ref=ext"
+      }
+   },
+   "content_scripts": [ {
+      "js": [ "content_script.js" ],
+      "matches": [ "https://*.perplexity.ai/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Change default search engine to perplexity search.",
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "19": "images/icon19.png",
+      "38": "images/icon38.png",
+      "48": "images/icon48.png"
+   },
+   "manifest_version": 3,
+   "name": "PERPLEXITY search",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.11"
+}
